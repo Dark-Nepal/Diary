@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="conatiner text-center">
+    <h2>
+        <span class="text-danger">
+            {{ info}}
+        </span>
+        {{ note }}
+    </h2>
+</div>
+
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class=" col-lg-9 col-md-8">
+            <div class="card p-3">
+                <div class="row justify-content-center">
+                    <div class="col-12">
+                        <h3 class="font-weight-bold heading text-center">
+                          Write your <span class="text-danger">Diary</span> .
+                        </h3>
+                    </div>
+                </div>
+                <form action="{% url 'add' %}" class="form-card" method="POST">
+                      
+                       {% csrf_token %}
+                    <div class="row justify-content-center">
+                        <div class="col-12">
+                            <div class="input-group container col-12"> {{ form.title }} <label>Title</label> </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-12">
+                            <div class="input-group "> 
+                               <div class="container col-12">
+                                {{ form.media}} {{ form.content }} 
+                               </div>
+                             </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row justify-content-center mt-5">
+                        <div class="col-md-12"> 
+                            <div class="container col-12">
+                                <input type="submit" value="Add Entry" class="btn btn-pay "> 
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+{% endblock %}

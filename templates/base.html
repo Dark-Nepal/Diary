@@ -1,0 +1,85 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon">
+  
+    <!-- Bootstrap4 link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <!--favicon-->
+   
+    <title>
+        {% block head_title %}
+        {% endblock head_title %}
+
+
+    </title>
+</head>
+<body class="bg-light">
+    <nav class="navbar navbar-expand-lg  navbar-light bg-white  ">
+        <a class="navbar-brand" href="https://www.instagram.com/dark__nepal/" target="_blank" rel="noopener noreferrer">
+          <img src="{% static 'img/darknepal.jpg' %}" class="rounded mx-auto d-block" alt="Logo" width="50px" height="50px">
+        </a>
+        
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav ml-auto">
+            <a class="nav-item nav-link " href="{% url 'home' %}">
+              <img src="{% static 'img/home.png' %} " alt="Add" width="100" height="55">
+            </a>
+
+            <a class="nav-item nav-link " href="{% url 'add' %}">
+                <img src="{% static 'img/pen.png' %}" alt="Add" width="80" height="70">
+            </a>
+            <a class="nav-item nav-link " href="{% url 'diarylist' %}">
+              <img src="{% static 'img/diary.png' %} " alt="Diary" width="80" height="60">
+            </a>
+           
+            
+          </div>
+        </div>
+      </nav>
+    <div class="container-fluid bg-white mb-5 " >
+
+          
+          <h1 class="text-center">
+             <span class="bold"> Dark <span class="text-danger">Nepal</span> Diary</span> 
+          </h1>
+
+          
+    </div>
+
+    {% block content %} {% endblock %}
+
+
+      
+
+    
+
+
+
+<footer >
+  <div class="container">
+    <p class="font-weight-bold text-center">
+      &copy; 2022  Dark<span class="text-danger"> Nepal</span>
+    </p>
+  </div>
+</footer>
+
+    
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</body>
+</html>

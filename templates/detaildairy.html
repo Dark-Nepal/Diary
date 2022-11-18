@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="container text-center">
+    <h1 class="font-weight-bold">{{ diary.title }} </h1>
+
+    <h6 class="font-weight-bold px-5">
+        <span class="text-danger">Date:</span> 
+        {{ diary.post_date }}
+    </h6>
+</div>
+
+<div class="container card p-4 ">
+    <p class="text-center">
+        {{ diary.content.html|safe}}
+    </p>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="container">
+    <h1 class="font-weight-bold"> <span class="text-danger">Great</span> Greetings !</h1>
+  </div>
+
+  <div class="container  text-center">
+    <h3 class="font-weight-bold px-5">
+      Your  <span class="text-danger">Diaries</span> Till date now !
+    </h3>
+  </div>
+
+
+  
+
+  
+   <div class="container mt-5 ">
+  
+     {% for diary in diaries %}
+
+    <div class="card text-center mb-3 ">
+      <div class="card-header">
+        <span class="text-danger">Date:</span> 
+        {{ diary.post_date }}
+      </div>
+      <div class="card-body ">
+        <h5 class="card-title">{{ diary.title }}</h5>
+        <a href="{% url 'detail' diary.id %}" class="btn btn-danger">View more .</a>
+      </div>
+    </div>
+
+    {% endfor %}
+
+
+    {% if  %}       
+        <div class="container text-center mt-5 ">
+         <div class="text-center mb-2">
+           <img src="{% static 'img/empty.png' %}"  alt="Empty" width="500" height="200">
+         </div>
+           <a href="{% url 'add' %}" class="btn btn-secondary btn-lg" >Write you diary,<span class="font-weight-bold">Today</span></a>
+        </div>
+    {% endif %}
+
+   </div>
+    
+
+{% endblock %}
