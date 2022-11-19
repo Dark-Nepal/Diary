@@ -4,12 +4,12 @@
  
 Diary, a type of autobiographical writing in which the writer frequently keeps a record of their thoughts and actions. The diary is franker than writing done for publication because it is written solely for the writer's use.
 
-**Demo og app**
+**Demo of application**
 
 ![image](https://user-images.githubusercontent.com/60769603/202853852-26229941-46ac-4543-8844-1e9d00803137.png)
 
 
-** This project is build using Django **
+﻿# **This project is build using Django**
 
 
 
