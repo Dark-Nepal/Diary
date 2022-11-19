@@ -1,6 +1,6 @@
 from django import forms
 from django_quill.forms import QuillFormField
-from .models import Diary
+from diary.models import Diary
 
 class QuillForm(forms.Form):
     content = QuillFormField()

@@ -31,7 +31,7 @@ def add(request):
 
 def detail(request,diary_id):
     diary = get_object_or_404(Diary, pk=diary_id)
-    return render(request, 'detaildairy.html', { 'diary':diary})
+    return render(request, 'detaildiary.html', { 'diary':diary})
 
 
 
@@ -45,6 +45,6 @@ def diarylist(request):
     diaries = Diary.objects.order_by('-post_date')
     notice= True if len(diaries) == 0 else None
 
-    return render(request, 'dairylist.html', {'diaries':diaries, 'notice':notice })
+    return render(request, 'diarylist.html', {'diaries':diaries, 'notice':notice })
 
 

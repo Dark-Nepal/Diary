@@ -7,13 +7,19 @@
     <h1 class="font-weight-bold"> <span class="text-danger">Great</span> Greetings !</h1>
   </div>
 
+{% if notice %}
   <div class="container  text-center">
     <h3 class="font-weight-bold px-5">
-      Your  <span class="text-danger">Diaries</span> Till date now !
+      Your  don't <span class="text-danger">Diary</span> Till date now !
     </h3>
   </div>
-
-
+{% else %}
+   <div class="container  text-center">
+     <h3 class="font-weight-bold px-5">
+       Your   <span class="text-danger">Diaries</span> Till date now !
+     </h3>
+   </div>
+{% endif %}
   
 
   
@@ -35,13 +41,11 @@
     {% endfor %}
 
 
-    {% if  %}       
+    {% if notice %}       
         <div class="container text-center mt-5 ">
          <div class="text-center mb-2">
-           <img src="{% static 'img/empty.png' %}"  alt="Empty" width="500" height="200">
-         </div>
-           <a href="{% url 'add' %}" class="btn btn-secondary btn-lg" >Write you diary,<span class="font-weight-bold">Today</span></a>
-        </div>
+           <img src="{% static 'img/empty1.png' %}"  alt="Empty" width="500" height="200">
+        
     {% endif %}
 
    </div>

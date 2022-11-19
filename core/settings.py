@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-#*$du=e8)(f*943mkar+pv_4zj@*%%+#-8=n96mo9#2n6ba(gj'
+SECRET_KEY = 'django-insecure-3lk&6!p+dn^08l&mz0(3wx%_h@o=7t%h$jpjo5l^i&rs=usbkt'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -38,7 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django_quill',
-    'dairy',
+    'diary.apps.DiaryConfig',
+   
+    
 ]
 
 MIDDLEWARE = [
@@ -56,7 +58,7 @@ ROOT_URLCONF = 'core.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [ BASE_DIR / 'templates' ],
+        'DIRS': [ BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -116,17 +118,18 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
-
 STATIC_URL = 'static/'
 STATIC_ROOT = BASE_DIR / 'static'
 STATICFILES_DIRS = [
     BASE_DIR / 'core/static'
 ]
 
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
 
 
 #Quill Configuration

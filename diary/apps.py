@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class DairyConfig(AppConfig):
+class DiaryConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'dairy'
+    name = 'diary'
